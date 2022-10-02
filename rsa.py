@@ -4,8 +4,6 @@ import math
 
 f = open(sys.argv[1],"r")
 contents = f.readlines()
-p, q = 0 , 0
-list = []
 
 def phi (p, q):
     phi = (p-1)*(q-1)
@@ -39,6 +37,9 @@ def encrypt(m):
 def decrypt(c):
     m = pow(c,d,n)
     return m
+
+p, q = 0 , 0
+list = []
 
 
 for i in contents:
