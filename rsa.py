@@ -59,20 +59,15 @@ for i in contents:
 
         #public key (e,n) private key (d,n)
 
-        print(Et)
-        print (options)
-        print("----------")
-        print(e)
-        print(d)
-        print("----------")
-
     else:
+        #encrypt and decrypt input messages
         messageIn = int(i)
         cipher = encrypt(messageIn)
         decryptMessage = decrypt(cipher)
 
-        print("message: ",messageIn, "Encrypted: ",cipher, "Decrypted: ", decryptMessage)
-        #do necessary calculations and print statements
+        #Output
+        output = f"p: {p}, q: {q}, n: {n}, phi: {Et}, e: {e}, d: {d}, message: {messageIn}, encrypted: {cipher}, decrypted: {decryptMessage}"
+        print(output)
 
 
 
