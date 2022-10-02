@@ -44,11 +44,19 @@ for i in contents:
         Et = phi(p, q)
         #Calculate a list of eligible coprimes of ɸ(n).
         options = coprimes(Et)
-        #third smallest coprime, e of private key
+
         e = options [2]
 
+        d = modinv(e,Et)
+
+        #public key (e,n) private key (d,n)
+
         print(Et)
-        print (e)
+        print (options)
+        print("----------")
+        print(e)
+        print(d)
+        print("----------")
 
     else:
         print (i)
