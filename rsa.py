@@ -1,5 +1,6 @@
 from email import message
 import sys
+import math
 
 f = open(sys.argv[1],"r")
 contents = f.readlines()
@@ -32,11 +33,11 @@ def coprimes(a):
     return list
 
 def encrypt(m):
-    c = modinv(m**e, n)
+    c = pow(m,e,n)
     return c
 
 def decrypt(c):
-    m = modinv(c**d, n)
+    m = pow(c,d,n)
     return m
 
 
